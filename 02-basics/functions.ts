@@ -31,4 +31,23 @@ function getValue(myVal: number): number | boolean {
 let myResult = getValue(10);
 console.log(myResult);
 
+const getHello = (s: string): string => {
+    return `Hello ${s}`;
+}
+
+const heros = ['Superman', 'Batman', 'Wonder Woman'];
+
+heros.map((hero) : string => {
+    console.log(getHello(hero));
+    return hero;
+})
+
+function consoleError(errmsg: string): void {
+    console.error(errmsg);
+}
+
+function handleError(errmsg: string): never {
+    throw new Error(errmsg);
+}
+
 export {}
