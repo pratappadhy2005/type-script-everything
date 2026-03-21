@@ -13,4 +13,14 @@ console.log(userId);
 let isAdmin: boolean = true;
 console.log(isAdmin);
 
+// ANY example
+let hero;
+
+function getHero() {
+  return true;
+}
+
+hero = getHero();
+console.log(hero);
+
 export {}
