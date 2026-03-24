@@ -80,4 +80,15 @@ type cardDetails = cardNumber & cardCVV & cardExpiry;
 // or
 type cardDetailsOr = cardNumber | cardCVV | cardExpiry;
 
+// Union types
+function getCardDetails(card: cardDetailsOr) : string {
+    if ('cardNumber' in card) {
+        return card.cardNumber;
+    } else if ('cardCVV' in card) {
+        return card.cardCVV;
+    } else {
+        return card.cardExpiry;
+    }
+}
+
 export {}
